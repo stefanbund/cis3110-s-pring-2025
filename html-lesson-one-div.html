@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Div Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .top-div, .bottom-div {
+            border: 1px solid grey;
+            padding: 10px;
+        }
+        .top-div {
+            height: 50%;
+            width: 100%;
+            background-color: lightblue;
+        }
+        .bottom-container {
+            display: flex;
+            height: 50%;
+            width: 100%;
+        }
+        .bottom-div {
+            width: 50%;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-div">Top Div</div>
+        <div class="bottom-container">
+            <div class="bottom-div">Bottom Div 1</div>
+            <div class="bottom-div">Bottom Div 2</div>
+        </div>
+    </div>
+</body>
+</html>

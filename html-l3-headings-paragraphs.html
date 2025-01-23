@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Div Layout</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .top-div, .bottom-div {
+            border: 1px solid grey;
+            padding: 10px;
+            background-size: cover;
+            background-position: center;
+            color: rgb(12, 3, 3); /* Adjust text color for better visibility */
+        }
+        .top-div {
+            height: 50%;
+            width: 100%;
+            background-image: url('path/to/your/top-car-image.jpg'); /* Replace with your car image URL */
+        }
+        .bottom-container {
+            display: flex;
+            height: 50%;
+            width: 100%;
+        }
+        .bottom-div {
+            width: 50%;
+            background-image: url('path/to/your/bottom-car-image1.jpg'); /* Replace with your car image URL */
+        }
+        .bottom-div:nth-child(2) {
+            background-image: url('path/to/your/bottom-car-image2.jpg'); /* Replace with your car image URL */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-div">
+            <h1>Top Div Heading</h1>
+            <p>This is a paragraph of text inside the top div. You can add more content here as needed.</p>
+        </div>
+        <div class="bottom-container">
+            <div class="bottom-div">
+                <h3>Bottom Div 1 Heading</h3>
+                <p>This is a paragraph of text inside the first bottom div. You can add more content here as needed.</p>
+            </div>
+            <div class="bottom-div">
+                <h3>Bottom Div 2 Heading</h3>
+                <p>This is a paragraph of text inside the second bottom div. You can add more content here as needed.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
