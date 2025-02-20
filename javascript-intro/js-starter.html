@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Doubling</title>
+</head>
+<body>
+
+<script>
+    // Basic Variable Assignment
+    let message = "Hello, JavaScript!";
+    console.log(message); // Output: Hello, JavaScript!
+
+    let number = 10;
+    console.log(number); // Output: 10
+
+    // Array Initialization and Doubling with index and incremental operator
+    const numbers1 = [1, 2, 3, 4, 5];
+    console.log("Original array (numbers1):", numbers1); // Output: [1, 2, 3, 4, 5]
+
+    for (let i = 0; i < numbers1.length; i++) {
+        numbers1[i] *= 2; // Doubling using *=
+    }
+
+    console.log("Doubled array (numbers1 - for loop):", numbers1); // Output: [2, 4, 6, 8, 10]
+
+
+    // Array Initialization and Doubling with forEach
+    const numbers2 = [1, 2, 3, 4, 5]; // Re-initialize for demonstration
+    console.log("Original array (numbers2):", numbers2); // Output: [1, 2, 3, 4, 5]
+
+    numbers2.forEach((num, index) => {
+        numbers2[index] = num * 2; // Doubling using *
+    });
+
+    console.log("Doubled array (numbers2 - forEach):", numbers2); // Output: [2, 4, 6, 8, 10]
+
+    // Creating a NEW array with doubled values using forEach (important!)
+    const numbers3 = [1, 2, 3, 4, 5];
+    const doubledNumbers3 = [];
+
+    numbers3.forEach(num => {
+        doubledNumbers3.push(num * 2);
+    });
+
+    console.log("Original array (numbers3):", numbers3); // Output: [1, 2, 3, 4, 5] (unchanged)
+    console.log("Doubled array (doubledNumbers3 - forEach, new array):", doubledNumbers3); // Output: [2, 4, 6, 8, 10]
+
+
+</script>
+
+</body>
+</html>
